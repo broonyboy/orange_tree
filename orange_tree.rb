@@ -48,31 +48,42 @@ class Orange_tree
         end
     end
     
-    private
     
     def dead
-        if @age >= 14
+        if @age >= 15
             @dead = true
         end
     end
     
 end
         
-tree1 = Orange_tree.new
-tree1.height
-tree1.countTheFruit
-tree1.pickFruit
-tree1.oneYearPasses
-tree1.height
-tree1.countTheFruit
-tree1.pickFruit
-tree1.countTheFruit
-tree2 = Orange_tree.new
-tree2.height
-tree2.oneYearPasses
-tree2.countTheFruit
+# tree1 = Orange_tree.new
+# tree1.height
+# tree1.countTheFruit
+# tree1.pickFruit
+# tree1.oneYearPasses
+# tree1.height
+# tree1.countTheFruit
+# tree1.pickFruit
+# tree1.countTheFruit
+# tree2 = Orange_tree.new
+# tree2.height
+# tree2.oneYearPasses
+# tree2.countTheFruit
+tree1= Orange_tree.new
 
 
 
-
-        
+while tree1.dead != true do
+puts @dead
+puts "Please input your choice (height, year, count, pick)"
+choice = gets.chomp
+case choice
+    when "height" then tree1.height
+    when "year" then tree1.oneYearPasses
+    when "count" then tree1.countTheFruit
+    when "pick" then tree1.pickFruit
+    else puts "Not sure what you want to do."
+ end   
+ end
+puts "Sorry the tree is dead" 
